@@ -1,6 +1,6 @@
 //$('#allQuotes').click(getCharacterId);
 document.getElementById('allQuotes').addEventListener('click', getCharacter);
-document.getElementById('randomQuote').addEventListener('click', getCharacter);
+// to be added later: document.getElementById('randomQuote').addEventListener('click',);
 
 
 var listOfCharacterIds = [];
