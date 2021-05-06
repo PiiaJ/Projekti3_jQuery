@@ -1,11 +1,12 @@
-//$('#allQuotes').click(getCharacterId);
-document.getElementById('allQuotes').addEventListener('click', getCharacter);
+$('#allQuotes').click(getCharacter);
+//document.getElementById('allQuotes').addEventListener('click', getCharacter);
 // to be added later: document.getElementById('randomQuote').addEventListener('click',);
 
 
 var listOfCharacterIds = [];
 var listOfCharacterNames = [];
 
+// tyhjennetään henkilöiden nimet ja id:t taulukoista ja poistetaan vanhat vuorosanat listalta
 function emptyLists() {
     while (listOfCharacterNames.length > 0) {
         listOfCharacterNames.pop();
@@ -13,21 +14,19 @@ function emptyLists() {
     while (listOfCharacterIds.length > 0) {
         listOfCharacterIds.pop();
     }
-    //console.log(document.getElementById('quotesList').childElementCount);
-    for (var i = 0; i < document.getElementById('quotesList').childElementCount; i++) {
-        //console.log(document.getElementById('quotesList').length);
-        document.getElementById('quotesList').innerHTML = '';
+  
+    for (var i = 0; i < $('#quotesList').children().length; i++) {
+        $('#quotesList').html('');
     }
 
 }
 
 function getCharacter() {
-    console.log(listOfCharacterIds);
+    // poistetaan vanhat tiedot funktion avulla
     emptyLists();
-    console.log(listOfCharacterIds);
+
     // selvitetään kenen henkilön tietoja haetaan
-    var lookedForCharacter = document.getElementById('who').value;
-    console.log(lookedForCharacter);
+    var lookedForCharacter = $('#who').val();
 
     // lähetetään pyyntö ja bearer token
     var myHeaders = new Headers();
@@ -55,9 +54,10 @@ function getCharacter() {
                     listOfCharacterIds.push(characterId);
                     listOfCharacterNames.push(characterName);
                 }
-
+                // tulostetaan henkilölistan hahmot ja heidän vuorosanansa funktioiden avulla
                 printCharacters();
             }  
+            // jos haettua nimeä ei löydy, pyydetään valitsemaan elokuvissa esiintyvä henkilö tai tarkistamaan kirjoitusasu
             else if (lookedForCharacter == "" && i == responseData.docs.length-1) {
                 alert("Choose a personage from LotR films");
             } 
@@ -78,11 +78,11 @@ function printCharacters() {
     lookedFor.innerHTML = '';
     for(var i = 0; i < listOfCharacterNames.length; i++) {
         if (listOfCharacterNames.length > 1) {
-            document.getElementById('explanation').style.display = 'block';
+            $('#explanation').css({'display':'block'});
            var listing = '<li>' + listOfCharacterNames[i] + '</li>'
             lookedFor.innerHTML += listing;
         } else if (listOfCharacterNames.length <= 1) {
-            document.getElementById('explanation').style.display = 'none';
+            $('#explanation').css({'display':'none'});
         }
         getAllQuotes(i);
     }  
