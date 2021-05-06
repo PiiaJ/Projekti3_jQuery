@@ -1,6 +1,5 @@
 $('#allQuotes').click(getCharacter);
-//document.getElementById('allQuotes').addEventListener('click', getCharacter);
-// to be added later: document.getElementById('randomQuote').addEventListener('click',);
+// to be added later: document.getElementById('randomQuote').addEventListener('', showRandomQuote);
 
 
 var listOfCharacterIds = [];
@@ -14,7 +13,6 @@ function emptyLists() {
     while (listOfCharacterIds.length > 0) {
         listOfCharacterIds.pop();
     }
-  
     for (var i = 0; i < $('#quotesList').children().length; i++) {
         $('#quotesList').html('');
     }
@@ -64,26 +62,27 @@ function getCharacter() {
             else if (lookedForCharacter.length > 1 && i == responseData.docs.length-1 && listOfCharacterNames.length == 0) {
                 alert("There is nothing to be found with this name. Please check you have written it correctly.")
             }
-
         }
-        
       })
       .catch(error => console.log('error', error));
 }
 
 
-
+// funktio tarkistaa onko samannimisiä henkilöitä useampia, jos on, niin kaikkien nimet tulostetaan. 
 function printCharacters() {
-    var lookedFor = document.getElementById('personsList');
-    lookedFor.innerHTML = '';
+    // poistetaan vanhat tiedot
+    var lookedFor = $('#personsList').html('');
+    var listing = [];
+    // jos vain yksi haetulla nimellä oleva henkilö, piilotetaan nimilistaan liittyvä info
     for(var i = 0; i < listOfCharacterNames.length; i++) {
         if (listOfCharacterNames.length > 1) {
             $('#explanation').css({'display':'block'});
-           var listing = '<li>' + listOfCharacterNames[i] + '</li>'
-            lookedFor.innerHTML += listing;
+            listing += '<li>' + listOfCharacterNames[i] + '</li>'
+            lookedFor.html(listing);
         } else if (listOfCharacterNames.length <= 1) {
             $('#explanation').css({'display':'none'});
         }
+        // haetaan vuorosanat funktion avulla
         getAllQuotes(i);
     }  
 }
@@ -92,7 +91,7 @@ function printCharacters() {
 function getAllQuotes(person) {
     var personId = listOfCharacterIds[person];
     var url = "https://the-one-api.dev/v2/character/" + personId + "/quote";
-    var quoteList = document.getElementById('quotesList');
+    var quoteList = $('#quotesList');
     console.log(url);
 
     // lähetetään pyyntö ja bearer token
@@ -108,11 +107,12 @@ function getAllQuotes(person) {
     fetch(url, requestOptions)
       .then((response) => response.json())
       .then((responseData) => {
-        console.log(responseData);
+        //console.log(responseData);
+        var listing = [];
         for(var i = 0; i < responseData.docs.length; i++) {
            console.log(responseData.docs[i].dialog);
-           var listing = '<li>' + responseData.docs[i].dialog + '</li>'
-           quoteList.innerHTML += listing;
+           listing += '<li>' + responseData.docs[i].dialog + '</li>'
+           quoteList.html(listing);
         }
       })
       .catch(error => console.log('error', error));
