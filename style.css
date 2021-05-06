@@ -11,13 +11,13 @@
     font-weight: bold;
 }
 
-#quotesList
+#quotes
 {
-    color: black;
-    list-style-type: circle;
+    border-style: double;
+    padding: 50px;
     background-attachment: inherit;
     background-image: url(ring-4612457_1920.jpg);
-    display:inherit;
+    display:none;
     position: static;
     left: 0;
     top: 0;
@@ -27,6 +27,12 @@
     background-color: hsla(0,0%,100%,0.65);
     background-blend-mode: overlay;
     background-repeat: repeat-y;
+}
+
+#quotesList
+{
+    color: black;
+    list-style-type: circle;
 }
 
 input[type=button]
@@ -43,7 +49,22 @@ input[type=text]
 {
     border-color: teal;
     border-radius: 3px;
-    margin: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 
+h1
+{
+    text-align: center;
+}
+
+h3
+{
+    text-align: center;
+}
+
+#question
+{
+    text-align: right;
+}
 

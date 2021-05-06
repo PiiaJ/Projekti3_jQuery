@@ -92,7 +92,8 @@ function getAllQuotes(person) {
     var personId = listOfCharacterIds[person];
     var url = "https://the-one-api.dev/v2/character/" + personId + "/quote";
     var quoteList = $('#quotesList');
-    console.log(url);
+    $('#quotes').css({'display':'block'})
+        console.log(url);
 
     // lähetetään pyyntö ja bearer token
     var myHeaders = new Headers();
