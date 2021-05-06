@@ -5,17 +5,55 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <script src="http://code.jquery.com/jquery-2.1.4.min.js
-"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <title>Lord of the Rings movie quotes</title>
 </head>
 <body>
-    Whose quote(s) do you want to see? <input type="text" id="who" placeholder="Personage"/>
-    <input type="button" id="allQuotes" value="Get quotes"/>
-    <!-- to be added later: <input type="notKnownYet" id="randomQuote" value="random quote"/>-->
-    <div id="persons"><p id="explanation" display="none">There is more than one personage with this name. All quotes are shown.</p>
-        <ul id="personsList"></ul></div>
-    <div id="quotes"><ul id="quotesList"></ul></div>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+            <h1>Welcome to Middle-earth</h1>
+            <h3>Here you can look for quotes from Lord of the Rings movies.</h3>
+            <br>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+            Whose quotes do you want to see? <input type="text" id="who" placeholder="Personage"/>
+            </div>
+            <div class="col-md-2">
+                <input type="button" id="allQuotes" value="Get quotes"/>
+                <!-- to be added later: <input type="notKnownYet" id="randomQuote" value="random quote"/>-->
+            </div>
+            <div class="col-md-6">
+            </div>
+        </div>
+        <div id="persons">
+            <div class="row">
+                <div class="col-md-12">
+                <p id="explanation" display="none">There is more than one personage with this name. All quotes from following personages are shown.
+                    Not all necessarily have any quotes.
+                </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-2">
+                <ul id="personsList"></ul>
+                </div>
+                <div class="col-md-10">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <div id="quotes">
+                    <ul id="quotesList"></ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,4 +1,49 @@
 #explanation 
 {
     display: none;
+    color: teal;
 }
+
+#personsList
+{
+    list-style: none;
+    color: teal;
+    font-weight: bold;
+}
+
+#quotesList
+{
+    color: black;
+    list-style-type: circle;
+    background-attachment: inherit;
+    background-image: url(ring-4612457_1920.jpg);
+    display:inherit;
+    position: static;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: hsla(0,0%,100%,0.65);
+    background-blend-mode: overlay;
+    background-repeat: repeat-y;
+}
+
+input[type=button]
+{
+   border-radius: 5px; 
+   border: none;
+   padding: 3px;
+   background-color: teal;
+   color: whitesmoke;
+   margin: 5px;
+}
+
+input[type=text]
+{
+    border-color: teal;
+    border-radius: 3px;
+    margin: 5px;
+}
+
+
