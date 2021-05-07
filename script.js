@@ -28,7 +28,7 @@ function getCharacter() {
 
     // lähetetään pyyntö ja bearer token
     var myHeaders = new Headers();
-    myHeaders.append("Authorization", "Bearer d_FTUjkOHP33DOjjvVtU");
+    myHeaders.append("Authorization", "Bearer Ltg9Y-VAzyOlw0YB_MPf");
     
     var requestOptions = {
       method: 'GET',
@@ -93,11 +93,11 @@ function getAllQuotes(person) {
     var url = "https://the-one-api.dev/v2/character/" + personId + "/quote";
     var quoteList = $('#quotesList');
     $('#quotes').css({'display':'block'})
-        console.log(url);
+    console.log(url);
 
     // lähetetään pyyntö ja bearer token
     var myHeaders = new Headers();
-    myHeaders.append("Authorization", "Bearer d_FTUjkOHP33DOjjvVtU");
+    myHeaders.append("Authorization", "Bearer Ltg9Y-VAzyOlw0YB_MPf");
     
     var requestOptions = {
       method: 'GET',
