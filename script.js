@@ -1,6 +1,15 @@
 $('#allQuotes').click(getCharacter);
 // to be added later: document.getElementById('randomQuote').addEventListener('', showRandomQuote);
+$(function() {
+    $('h1').css('color', 'teal');
+    $('h1').fadeTo(5000, 0.7);
+    $('#oneRing').fadeTo(7000, 0.1);
 
+});
+
+$(function() {
+       $('#ringInscript').slideUp(7000);
+})
 
 var listOfCharacterIds = [];
 var listOfCharacterNames = [];

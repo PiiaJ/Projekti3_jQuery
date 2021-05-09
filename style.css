@@ -4,6 +4,17 @@
     color: teal;
 }
 
+h1
+{
+    text-align: center;
+}
+
+#whatsIt
+{
+    text-align: center;
+    color: grey;
+}
+
 #personsList
 {
     list-style: none;
@@ -52,3 +63,12 @@ input[type=text]
     margin-top: 5px;
     margin-bottom: 5px;
 }
+
+#oneRing
+{
+    color: firebrick;
+    text-align: center;
+}
+
+
+
