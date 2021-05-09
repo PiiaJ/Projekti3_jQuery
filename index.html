@@ -11,17 +11,16 @@
     <title>Lord of the Rings movie quotes</title>
 </head>
 <body>
-    <div class="container-fluid">
-        <div class="row">
-            <div class="col-md-12">
+
+        <div class="jumbotron text-center">
             <h1>Welcome to Middle-earth</h1>
             <h4 id="oneRing">"One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them."</h4>
-            <img src="ringInscript.jpg" id="ringInscript">
+            <img src="ringInscript.jpg" id="ringInscript" class="img-circle">
             <h3 id="whatsIt">Here you can look for quotes from Lord of the Rings movies.</h3>
             <br>
-            </div>
         </div>
         <br>
+        <div class="container-fluid">
         <div class="row">
             <div class="col-md-12" id="question">
             I want to see quotes from <input type="text" id="who" placeholder="Personage"/>
@@ -36,20 +35,16 @@
                 <p id="explanation" display="none">There is more than one personage with this name. All quotes from following personages are shown.
                     All personages don't have quotes.
                 </p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-md-2">
                 <ul id="personsList"></ul>
                 </div>
                 <div class="col-md-10">
                 </div>
             </div>
-            <br><br>
+            <br>
             <div class="row">
                 <div class="col-md-12">
                     <div id="quotes">
-                    <ul id="quotesList"></ul>
+                    <ul id="quotesList" class="list-group"></ul>
                     </div>
                 </div>
             </div>

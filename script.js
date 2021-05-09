@@ -4,7 +4,7 @@ $(function() {
     $('h1').css('color', 'teal');
     $('h1').fadeTo(5000, 0.7);
     $('#oneRing').fadeTo(7000, 0.1);
-    $('#ringInscript').slideUp(7000);
+    $('#ringInscript').slideUp(5000);
 });
 
 var listOfCharacterIds = [];
@@ -117,7 +117,7 @@ function getAllQuotes(person) {
         var listing = [];
         for(var i = 0; i < responseData.docs.length; i++) {
            console.log(responseData.docs[i].dialog);
-           listing += '<li>' + responseData.docs[i].dialog + '</li>'
+           listing += '<li class="list-group-item">' + responseData.docs[i].dialog + '</li>'
            quoteList.html(listing);
         }
       })

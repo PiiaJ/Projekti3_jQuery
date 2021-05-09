@@ -84,5 +84,9 @@ input[type=text]
     text-align: center;
 }
 
+.list-group{
+    opacity: 0.5;
+}
+
 
 
