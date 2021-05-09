@@ -70,5 +70,14 @@ input[type=text]
     text-align: center;
 }
 
+#ringInscript
+{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+    height: 70%;
+}
+
 
 
