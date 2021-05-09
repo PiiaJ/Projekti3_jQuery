@@ -15,28 +15,26 @@
         <div class="row">
             <div class="col-md-12">
             <h1>Welcome to Middle-earth</h1>
-            <h3 id="oneRing">"One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them."</h3>
+            <h4 id="oneRing">"One Ring to rule them all, One Ring to find them, One Ring to bring them all and in the darkness bind them."</h4>
             <img src="ringInscript.jpg" id="ringInscript">
             <h3 id="whatsIt">Here you can look for quotes from Lord of the Rings movies.</h3>
             <br>
             </div>
         </div>
+        <br>
         <div class="row">
-            <div class="col-md-4">
-            Whose quotes do you want to see? <input type="text" id="who" placeholder="Personage"/>
-            </div>
-            <div class="col-md-1">
-                <input type="button" id="allQuotes" value="Get quotes"/>
-                <!-- to be added later: <input type="notKnownYet" id="randomQuote" value="random quote"/>-->
-            </div>
-            <div class="col-md-7">
+            <div class="col-md-12" id="question">
+            I want to see quotes from <input type="text" id="who" placeholder="Personage"/>
+            <input type="button" id="allQuotes" value="Get quotes"/>
+            <!-- to be added later: <input type="notKnownYet" id="randomQuote" value="random quote"/>-->
             </div>
         </div>
+        <br><br>
         <div id="persons">
             <div class="row">
                 <div class="col-md-12">
                 <p id="explanation" display="none">There is more than one personage with this name. All quotes from following personages are shown.
-                    Not all necessarily have any quotes.
+                    All personages don't have quotes.
                 </p>
                 </div>
             </div>
@@ -47,6 +45,7 @@
                 <div class="col-md-10">
                 </div>
             </div>
+            <br><br>
             <div class="row">
                 <div class="col-md-12">
                     <div id="quotes">

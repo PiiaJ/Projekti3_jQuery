@@ -25,6 +25,7 @@ h1
 #quotes
 {
     border-style: double;
+    border-radius: 3px;
     padding: 15px;
     background-attachment: inherit;
     background-image: url(ring-4612457_1920.jpg);
@@ -60,8 +61,7 @@ input[type=text]
 {
     border-color: teal;
     border-radius: 3px;
-    margin-top: 5px;
-    margin-bottom: 5px;
+    margin: 5px;
 }
 
 #oneRing
@@ -77,6 +77,11 @@ input[type=text]
     margin-right: auto;
     width: 70%;
     height: 70%;
+}
+
+#question
+{
+    text-align: center;
 }
 
 
